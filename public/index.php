@@ -5,6 +5,7 @@
 </head>
 <body>
     <?php
+        ob_start();
         include __DIR__."/head.php";
 
         //array
@@ -38,6 +39,7 @@
 
         getCallText('printFunc');
 
+        ob_end_flush();
     ?>
 </body>
 </html>
