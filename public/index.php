@@ -5,11 +5,42 @@
 </head>
 <body>
     <?php
-        function printFunc(String $test){
-            echo 'Test '.$test;
+        include __DIR__."/head.php";
+
+        //array
+        $array = ["A","B","C"];
+        for($i=0;$i<count($array);$i++){
+            echo " :".$array[$i].": ";
         }
-        printFunc('php test 페이지');
+
+        foreach(array_keys($array) as $i){
+            echo " :".$i.": ";
+        }
+        
+        
+        //object
+        $object = [
+            "A" => "<div>A</div>",
+            "B" => "<div>B</div>",
+            "C" => "<div>C</div>",
+        ];
+        foreach($object as $o){
+            echo $o;
+        }
+
+        function printFunc(String $test){
+            return 'Test '.$test;
+        }
+
+        function getCallText(String $text){
+            echo $text('hi');
+        }
+
+        getCallText('printFunc');
+
     ?>
 </body>
 </html>
+
+
 
