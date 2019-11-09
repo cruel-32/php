@@ -9,7 +9,7 @@
         include __DIR__."/head.php";
 
         //array
-        $array = ["A","B","C"];
+        $array = ["A", "B", "C"];
         for($i=0;$i<count($array);$i++){
             echo " :".$array[$i].": ";
         }
